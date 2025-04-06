@@ -1,0 +1,20 @@
+{
+  "name": "vasu-email-copywriter",
+  "version": "1.0.0",
+  "description": "Vasu - Freelance Email Copywriter for YouTubers & Course Creators",
+  "main": "index.html",
+  "scripts": {
+    "dev": "serve",
+    "build": "echo 'No build required'"
+  },
+  "keywords": [
+    "email",
+    "copywriting",
+    "portfolio"
+  ],
+  "author": "Vasu Kapadiya",
+  "license": "ISC",
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}

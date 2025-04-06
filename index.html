@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="keywords" content="Email Copywriter, Email Marketing, Freelance Copywriter" />
+        <meta name="description" content="Vasu - Freelance Email Copywriter for YouTubers & Course Creators" />
+        <title>Vasu - Email Copywriter</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        <link rel="stylesheet" href="styles.css" />
+        
+        <!-- Modal styles -->
+        <style>
+            /* Simple modal style */
+            .modal {
+                display: none;
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0,0,0,0.5);
+                z-index: 9999;
+            }
+            
+            .modal-content {
+                background-color: white;
+                margin: 5% auto;
+                padding: 30px;
+                width: 90%;
+                max-width: 650px;
+                border-radius: 8px;
+                position: relative;
+                max-height: 85vh;
+                overflow-y: auto;
+                box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            }
+            
+            .close {
+                position: absolute;
+                right: 20px;
+                top: 15px;
+                font-size: 26px;
+                font-weight: bold;
+                color: #999;
+                cursor: pointer;
+                transition: color 0.2s;
+            }
+            
+            .close:hover {
+                color: #333;
+            }
+            
+            /* Email content styling */
+            .email-header {
+                margin-bottom: 20px;
+                padding-bottom: 15px;
+                border-bottom: 1px solid #eee;
+            }
+            
+            .email-header h2 {
+                margin-top: 0;
+                margin-bottom: 15px;
+                font-size: 1.6rem;
+                color: #333;
+            }
+            
+            .email-header p {
+                margin-bottom: 8px;
+                font-size: 0.95rem;
+                color: #444;
+            }
+            
+            .email-body {
+                line-height: 1.7;
+                color: #444;
+                font-size: 15px;
+            }
+            
+            .email-body p {
+                margin-bottom: 12px;
+            }
+            
+            .email-body strong {
+                color: #333;
+            }
+            
+            .email-body ul {
+                margin: 15px 0;
+                padding-left: 25px;
+            }
+            
+            .email-body ul li {
+                margin-bottom: 8px;
+            }
+            
+            .email-body a {
+                color: #3742fa;
+                text-decoration: none;
+            }
+            
+            .email-body a:hover {
+                text-decoration: underline;
+            }
+            
+            /* Services Grid Styling */
+            .services-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+                margin-top: 30px;
+                text-align: center;
+            }
+            
+            .service-card {
+                background-color: white;
+                border-radius: 8px;
+                padding: 30px 20px;
+                transition: transform 0.3s, box-shadow 0.3s;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            }
+            
+            .service-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            }
+            
+            .service-card i {
+                font-size: 2.5rem;
+                margin-bottom: 15px;
+                color: #3742fa;
+                display: block;
+            }
+            
+            .service-card h4 {
+                margin-bottom: 10px;
+                font-size: 1.2rem;
+                color: #333;
+            }
+            
+            .service-card p {
+                color: #666;
+                font-size: 0.95rem;
+                line-height: 1.5;
+            }
+            
+            @media (max-width: 992px) {
+                .services-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+            
+            @media (max-width: 576px) {
+                .services-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+        
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <!-- Loader -->
+        <div class="loader">
+            <div class="loader-circle"></div>
+                    </div>
+
+        <!-- Floating WhatsApp Button -->
+        <a href="https://wa.me/918849297987" class="whatsapp-float" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="container">
+                <h1 class="logo">Vasu</h1>
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                        </ul>
+                <div class="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+                    </nav>
+
+        <!-- Home Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-flex">
+                        <div class="hero-text">
+                            <h1>Vasu</h1>
+                            <h2>Freelance Email Copywriter for YouTubers & Course Creators</h2>
+                            <p>I help content creators convert subscribers into customers with high-converting email sequences.</p>
+                            <a href="#contact" class="btn btn-primary">Let's Work Together</a>
+                                </div>
+                        <div class="hero-image">
+                            <img src="public/images/vasu-profile.jpg" alt="Vasu - Freelance Email Copywriter" class="profile-photo">
+                            </div>
+                                </div>
+                            </div>
+                                </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>I specialize in crafting compelling email copy that connects with your audience and drives conversions. My approach combines persuasive psychology with a deep understanding of your unique voice to create emails that feel authentic and drive results.</p>
+                        
+                        <h3>How I Help You</h3>
+                        <div class="services-grid">
+                            <div class="service-card">
+                                <i class="fas fa-envelope"></i>
+                                <h4>Welcome Emails</h4>
+                                <p>First impression when someone joins a list</p>
+                            </div>
+                            <div class="service-card">
+                                <i class="fas fa-user-plus"></i>
+                                <h4>Cold Emails</h4>
+                                <p>Sent to strangers for leads or offers</p>
+                            </div>
+                            <div class="service-card">
+                                <i class="fas fa-chart-line"></i>
+                                <h4>Sales Emails</h4>
+                                <p>Designed to get a sale or conversion</p>
+                            </div>
+                            <div class="service-card">
+                                <i class="fas fa-newspaper"></i>
+                                <h4>Newsletters</h4>
+                                <p>Regular updates, info, and soft promotion</p>
+                            </div>
+                            <div class="service-card">
+                                <i class="fas fa-shopping-cart"></i>
+                                <h4>Cart Abandonment Emails</h4>
+                                <p>For ecom sites to recover lost sales</p>
+                        </div>
+                            <div class="service-card">
+                                <i class="fas fa-bullhorn"></i>
+                                <h4>Launch Sequences</h4>
+                                <p>For new product/course launches</p>
+                            </div>
+                            <div class="service-card">
+                                <i class="fas fa-user-check"></i>
+                                <h4>Onboarding Emails</h4>
+                                <p>Guiding new users after signup</p>
+                            </div>
+                            <div class="service-card">
+                                <i class="fas fa-seedling"></i>
+                                <h4>Nurture Emails</h4>
+                                <p>Build trust before asking for the sale</p>
+                            </div>
+                            <div class="service-card">
+                                <i class="fas fa-sync-alt"></i>
+                                <h4>Re-engagement Emails</h4>
+                                <p>Win back cold subscribers</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+                <h2 class="section-title">Email Samples</h2>
+                <div class="portfolio-container">
+                    <!-- Email Sample 1 -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-header">
+                            <h3>Welcome Email</h3>
+                            <p class="preview-text">First impression when someone joins a list</p>
+                        </div>
+                        <button class="view-sample-btn" onclick="openModal('welcome-modal')">View Sample</button>
+                    </div>
+
+                    <!-- Email Sample 2 -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-header">
+                            <h3>Cold Email</h3>
+                            <p class="preview-text">Sent to strangers for leads or offers</p>
+                        </div>
+                        <button class="view-sample-btn" onclick="openModal('cold-modal')">View Sample</button>
+                    </div>
+
+                    <!-- Email Sample 3 -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-header">
+                            <h3>Sales Email</h3>
+                            <p class="preview-text">Designed to get a sale or conversion</p>
+                        </div>
+                        <button class="view-sample-btn" onclick="openModal('sales-modal')">View Sample</button>
+                    </div>
+                    
+                    <!-- Email Sample 4 -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-header">
+                            <h3>Newsletter</h3>
+                            <p class="preview-text">Regular updates, info, and soft promotion</p>
+                        </div>
+                        <button class="view-sample-btn" onclick="openModal('newsletter-modal')">View Sample</button>
+                    </div>
+                    
+                    <!-- Email Sample 5 -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-header">
+                            <h3>Cart Abandonment Email</h3>
+                            <p class="preview-text">For ecom sites to recover lost sales</p>
+                        </div>
+                        <button class="view-sample-btn" onclick="openModal('cart-modal')">View Sample</button>
+                    </div>
+                    
+                    <!-- Email Sample 6 -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-header">
+                            <h3>Launch Sequence Email</h3>
+                            <p class="preview-text">For new product/course launches</p>
+                        </div>
+                        <button class="view-sample-btn" onclick="openModal('launch-modal')">View Sample</button>
+                    </div>
+                    
+                    <!-- Email Sample 7 -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-header">
+                            <h3>Onboarding Email</h3>
+                            <p class="preview-text">Guiding new users after signup</p>
+                        </div>
+                        <button class="view-sample-btn" onclick="openModal('onboarding-modal')">View Sample</button>
+                    </div>
+
+                    <!-- Email Sample 8 -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-header">
+                            <h3>Nurture Email</h3>
+                            <p class="preview-text">Build trust before asking for the sale</p>
+                        </div>
+                        <button class="view-sample-btn" onclick="openModal('nurture-modal')">View Sample</button>
+                    </div>
+                    
+                    <!-- Email Sample 9 -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-header">
+                            <h3>Re-engagement Email</h3>
+                            <p class="preview-text">Win back cold subscribers</p>
+                        </div>
+                        <button class="view-sample-btn" onclick="openModal('reengage-modal')">View Sample</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Email Modals -->
+        <div id="welcome-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('welcome-modal')">&times;</span>
+                <div class="email-header">
+                    <h2>Welcome Email</h2>
+                    <p><strong>Subject:</strong> Welcome! Glad to have you here</p>
+                    <p><strong>From:</strong> Course Creator</p>
+                </div>
+                <div class="email-body">
+                    <p>Hey [First Name],</p>
+                    <p>I just wanted to say a big thank you for signing up! I'm honestly so excited that you're here.</p>
+                    <p>No matter where you're at in your [topic, e.g., "real estate journey" or "content creation path"], I'm here to help you get the results you're after. Expect tips, tools, and content that's actually useful — no fluff, just real value.</p>
+                    <p>Here's what you can expect from me:</p>
+                    <ul>
+                        <li>Simple, actionable tips to help you move forward</li>
+                        <li>Helpful resources I know you'll love</li>
+                        <li>First dibs on new content, updates, and special offers</li>
+                        <li>And sometimes, a little inspiration to keep you going 😉</li>
+                    </ul>
+                    <p>👉 To get started, I've got something special for you — check it out here:<br>[Link to freebie or resource]</p>
+                    <p>If you ever have any questions or need anything, just hit reply. Seriously, I read every email, and I'm happy to help however I can!</p>
+                    <p>Thanks again for being here — I'm pumped to help you along the way!</p>
+                    <p>Talk soon,<br>[Your Client's Name]<br>[Optional: Tagline or CTA like "Helping YouTubers turn followers into buyers"]<br>[Social links or contact button]</p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="sales-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('sales-modal')">&times;</span>
+                <div class="email-header">
+                    <h2>Sales Email</h2>
+                    <p><strong>Subject:</strong> This Week's Tips to Boost Your Email Sales</p>
+                    <p><strong>From:</strong> Vasu Kapadiya</p>
+                </div>
+                <div class="email-body">
+                    <p>Hey [First Name],</p>
+                    <p>Welcome to this week's newsletter! I'm excited to share some actionable email marketing tips that can help you level up your content and start converting more of your audience into loyal customers.</p>
+                    <p>Here's what you'll find this week:</p>
+                    <ul>
+                        <li><strong>Subject Line Hacks:</strong> How to write irresistible subject lines that get your emails opened every time.</li>
+                        <li><strong>Creating a Killer Welcome Sequence:</strong> The first 3 emails every course creator needs to build trust and drive sales.</li>
+                        <li><strong>Email List Growth Tips:</strong> How to grow your email list (even if you're just starting out).</li>
+                        <li><strong>Quick Case Study:</strong> How I helped [Client's Name] increase course signups with a strategic email campaign.</li>
+                    </ul>
+                    <p><strong>Why it matters:</strong><br>
+                    Whether you're looking to nurture leads, sell more products, or build deeper relationships with your audience — these tips will get you closer to your goals. And if you ever want personalized help with your email strategy, I'm always here to chat!</p>
+                    <p>👉 Don't forget, I'm currently offering a 2-week free trial for new clients. If you'd like to test my email services risk-free, just reply to this email.</p>
+                    <p>Looking forward to next week's newsletter! Until then, keep those emails coming. 😄</p>
+                    <p>Best,<br>Vasu<br>[Your Contact Info / Portfolio Link]<br>[Optional CTA: "Let's Connect on WhatsApp"]</p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="reengage-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('reengage-modal')">&times;</span>
+                <div class="email-header">
+                    <h2>Re-engagement Email</h2>
+                    <p><strong>Subject:</strong> We miss you! Here's a special offer to come back 👋</p>
+                    <p><strong>From:</strong> Course Creator</p>
+                </div>
+                <div class="email-body">
+                    <p>Hey [First Name],</p>
+                    <p>It's been a little while since we've seen you, and we miss having you around!</p>
+                    <p>If you've been busy or just haven't had a chance to dive into [Product/Course Name], now's the perfect time to jump back in. We've added some new features/resources that I think you'll love.</p>
+                    <p>To help you get back on track, here's a special offer just for you:</p>
+                    <p>🎁 [Offer details – discount, bonus, etc.]</p>
+                    <p>This offer is only available for a limited time, so make sure to take advantage of it before it's gone.</p>
+                    <p>We'd love to see you back!</p>
+                    <p>Best,<br>[Your Name]<br>[Your Contact Info]<br>[Link to return or re-engage]</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Email Modals -->
+        <div id="cold-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('cold-modal')">&times;</span>
+                <div class="email-header">
+                    <h2>Cold Email</h2>
+                    <p><strong>Subject:</strong> Can I help you turn more viewers into buyers?</p>
+                    <p><strong>From:</strong> Vasu Kapadiya</p>
+                </div>
+                <div class="email-body">
+                    <p>Hey [First Name],</p>
+                    <p>I hope you're doing well! My name's Vasu, and I'm a freelance email copywriter who helps YouTubers and course creators like you connect with your audience and boost sales through high-converting emails.</p>
+                    <p>I've noticed that many content creators don't take full advantage of email marketing — and that's where I come in. I write emails that feel natural and help build trust, engage your audience, and ultimately, drive sales.</p>
+                    <p>Here's what I can help with:</p>
+                    <ul>
+                        <li>Writing sales emails that convert viewers into buyers</li>
+                        <li>Crafting nurture sequences to keep your audience engaged</li>
+                        <li>Creating welcome series that make a strong first impression</li>
+                    </ul>
+                    <p>I'd love to offer you a 3-week trial where I'll work on your email copy at no cost — so you can see how my work fits with your brand and audience.</p>
+                    <p>If you're interested, just reply and we can chat more about how I can help.</p>
+                    <p>Looking forward to hearing from you!</p>
+                    <p>Best,<br>Vasu<br>[Your Website or LinkedIn link]<br>[Optional: CTA like "Let's chat on WhatsApp"]</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Alternative Cold Email Sample -->
+        <div id="cold-modal-alt" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('cold-modal-alt')">&times;</span>
+                <div class="email-header">
+                    <h2>Cold Email (Alternative)</h2>
+                    <p><strong>Subject:</strong> Want to boost your course sales with high-converting emails?</p>
+                    <p><strong>From:</strong> Vasu Kapadiya</p>
+                </div>
+                <div class="email-body">
+                    <p>Hey [First Name],</p>
+                    <p>I hope you're doing well! I'm Vasu, and I specialize in writing email copy that turns your audience into loyal customers.</p>
+                    <p>If you're looking to increase sales for your courses or digital products, I can help you craft emails that not only get opened, but actually convert.</p>
+                    <p>Here's how I can help:</p>
+                    <ul>
+                        <li>Sales Sequences: I write persuasive email series that nurture your leads and get them ready to buy.</li>
+                        <li>Launch Campaigns: Boost your course launches with a sequence that gets people excited and ready to enroll.</li>
+                        <li>Engagement Emails: Keep your audience engaged and invested with well-timed emails that build relationships.</li>
+                    </ul>
+                    <p>I'd love to work with you on crafting a custom email strategy that fits your brand and helps you grow. If you're interested, I'd be happy to chat and show you some of my past work.</p>
+                    <p>Let me know if you'd like to hop on a call and discuss further — I'm offering a 2-week free trial for new clients to test my work with no risk!</p>
+                    <p>Looking forward to hearing from you!</p>
+                    <p>Best,<br>Vasu<br>[Your Website or Portfolio Link]<br>[Your Contact Info or WhatsApp Link]</p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="newsletter-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('newsletter-modal')">&times;</span>
+                <div class="email-header">
+                    <h2>Newsletter Email</h2>
+                    <p><strong>Subject:</strong> This Week's Tips to Boost Your Email Sales</p>
+                    <p><strong>From:</strong> Vasu Kapadiya</p>
+                </div>
+                <div class="email-body">
+                    <p>Hey [First Name],</p>
+                    <p>Welcome to this week's newsletter! I'm excited to share some actionable email marketing tips that can help you level up your content and start converting more of your audience into loyal customers.</p>
+                    <p>Here's what you'll find this week:</p>
+                    <ul>
+                        <li><strong>Subject Line Hacks:</strong> How to write irresistible subject lines that get your emails opened every time.</li>
+                        <li><strong>Creating a Killer Welcome Sequence:</strong> The first 3 emails every course creator needs to build trust and drive sales.</li>
+                        <li><strong>Email List Growth Tips:</strong> How to grow your email list (even if you're just starting out).</li>
+                        <li><strong>Quick Case Study:</strong> How I helped [Client's Name] increase course signups with a strategic email campaign.</li>
+                    </ul>
+                    <p><strong>Why it matters:</strong><br>
+                    Whether you're looking to nurture leads, sell more products, or build deeper relationships with your audience — these tips will get you closer to your goals. And if you ever want personalized help with your email strategy, I'm always here to chat!</p>
+                    <p>👉 Don't forget, I'm currently offering a 2-week free trial for new clients. If you'd like to test my email services risk-free, just reply to this email.</p>
+                    <p>Looking forward to next week's newsletter! Until then, keep those emails coming. 😄</p>
+                    <p>Best,<br>Vasu<br>[Your Contact Info / Portfolio Link]<br>[Optional CTA: "Let's Connect on WhatsApp"]</p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="cart-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('cart-modal')">&times;</span>
+                <div class="email-header">
+                    <h2>Cart Abandonment Email</h2>
+                    <p><strong>Subject:</strong> Did you forget something? Your cart is waiting! 🛒</p>
+                    <p><strong>From:</strong> Course Creator</p>
+                </div>
+                <div class="email-body">
+                    <p>Hey [First Name],</p>
+                    <p>It looks like you left something behind in your cart — no worries, we've saved it for you!</p>
+                    <p>Here's a quick reminder of what's waiting for you:</p>
+                    <p>[List of items in the cart, if applicable]</p>
+                    <p>I totally get it — life gets busy! If you're ready to grab your [product/course], just click the button below to complete your order:</p>
+                    <p>👉 [Link to Complete Your Purchase]</p>
+                    <p>If you have any questions or need help with anything, don't hesitate to reach out. I'm here to help!</p>
+                    <p>As a little extra nudge, here's a special offer just for you:</p>
+                    <p>[Optional discount code or bonus offer]</p>
+                    <p>Don't miss out — we'd love to have you join [the course or get the product]. Looking forward to seeing you on the other side! 😄</p>
+                    <p>Best,<br>[Your Name]<br>[Your Contact Info / Website Link]</p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="launch-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('launch-modal')">&times;</span>
+                <div class="email-header">
+                    <h2>Launch Sequence Email</h2>
+                    <p><strong>Subject:</strong> Big news coming soon! Are you ready for something special? 🎉</p>
+                    <p><strong>From:</strong> Course Creator</p>
+                </div>
+                <div class="email-body">
+                    <p>Hey [First Name],</p>
+                    <p>I'm super excited to share something amazing with you very soon. I've been working on something that I know you'll love, and I can't wait to reveal it!</p>
+                    <p>I'll be opening the doors to [Product/Course Name] in just a few days, and I want you to be the first to know.</p>
+                    <p>In the meantime, make sure to mark your calendar for [Launch Date] — this is going to be HUGE!</p>
+                    <p>Stay tuned. More details coming soon… 👀</p>
+                    <p>Best,<br>[Your Name]<br>[Your Contact Info]</p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="onboarding-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('onboarding-modal')">&times;</span>
+                <div class="email-header">
+                    <h2>Onboarding Email</h2>
+                    <p><strong>Subject:</strong> Welcome aboard! Let's get started with [Product/Course Name] 🚀</p>
+                    <p><strong>From:</strong> Course Creator</p>
+                </div>
+                <div class="email-body">
+                    <p>Hey [First Name],</p>
+                    <p>Welcome to [Product/Course Name]! 🎉 I'm so excited to have you with us. You're about to start a journey that will help you [mention the transformation or result they'll achieve].</p>
+                    <p>To get you off to a strong start, here's what you can do next:</p>
+                    <p><strong>Step 1:</strong> [Action item or instructions]<br>
+                    [Simple instructions on how to start using the product or course]</p>
+                    <p><strong>Step 2:</strong> [Bonus material or guide]<br>
+                    [Optional: A guide, video, or download that can help them get the most out of the experience]</p>
+                    <p>Feel free to reach out if you have any questions or get stuck. I'm here to help every step of the way.</p>
+                    <p>Excited for you to dive in!</p>
+                    <p>Best,<br>[Your Name]<br>[Your Contact Info]</p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="nurture-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('nurture-modal')">&times;</span>
+                <div class="email-header">
+                    <h2>Nurture Email</h2>
+                    <p><strong>Subject:</strong> A quick tip to help you get the most out of [Product/Course Name] 📈</p>
+                    <p><strong>From:</strong> Course Creator</p>
+                </div>
+                <div class="email-body">
+                    <p>Hey [First Name],</p>
+                    <p>I hope you're enjoying your time with [Product/Course Name] so far! I just wanted to share a quick tip to help you make the most of your experience and get even better results.</p>
+                    <p><strong>Tip of the Week:</strong> [Actionable tip or strategy]<br>
+                    [Description of the tip and how it will help them]</p>
+                    <p>This small change can make a huge impact! Let me know if you have any questions or need help implementing it. I'm always here for you.</p>
+                    <p>Stay tuned for more tips and resources coming your way!</p>
+                    <p>Best,<br>[Your Name]<br>[Your Contact Info]</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <h2 class="section-title">Client Feedback</h2>
+                <div class="testimonials-container">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="testimonial-text">
+                            <p>"Working with Vasu was a game-changer for my business. His email sequence increased my course sales by 42% in just one month. His attention to detail and understanding of my audience was exceptional."</p>
+                        </div>
+                        <div class="testimonial-client">
+                            <div class="client-image">
+                                <img src="public/images/testimonials/arjun.jpg" alt="Arjun Sharma">
+                            </div>
+                            <div class="client-info">
+                                <h4>Arjun Sharma</h4>
+                                <p>YouTube Creator, 150K+ Subscribers</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="testimonial-text">
+                            <p>"Vasu completely transformed our email marketing strategy. His cart abandonment emails alone recovered over $5,000 in lost sales. He's incredibly responsive and truly understands what motivates customers to take action."</p>
+                        </div>
+                        <div class="testimonial-client">
+                            <div class="client-image">
+                                <img src="public/images/testimonials/priya.jpg" alt="Priya Patel">
+                            </div>
+                            <div class="client-info">
+                                <h4>Priya Patel</h4>
+                                <p>E-Commerce Business Owner</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="testimonial-text">
+                            <p>"After Vasu rewrote our onboarding sequence, our course completion rate went up by 35%. Students are more engaged from day one, which has led to better results and more positive reviews. Worth every penny!"</p>
+                        </div>
+                        <div class="testimonial-client">
+                            <div class="client-image">
+                                <img src="public/images/testimonials/vikram.jpg" alt="Vikram Mehta">
+                            </div>
+                            <div class="client-info">
+                                <h4>Vikram Mehta</h4>
+                                <p>Online Course Creator</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Let's Connect</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <p>Ready to take your email marketing to the next level? Let's discuss your project!</p>
+                        <div class="contact-method">
+                            <a href="https://wa.me/918849297987" class="btn btn-secondary">
+                                <i class="fab fa-whatsapp"></i> Contact via WhatsApp
+                            </a>
+                        </div>
+                        <div class="contact-method">
+                            <a href="https://github.com/yourusername" class="btn btn-secondary" target="_blank">
+                                <i class="fab fa-github"></i> Connect on GitHub
+                            </a>
+                        </div>
+                        </div>
+                    <form class="contact-form" id="contact-form" onsubmit="submitForm(event)">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="submit-btn">Send Message</button>
+                        <p id="form-status" style="display: none; margin-top: 15px;"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 Vasu - Freelance Email Copywriter</p>
+        </div>
+        </footer>
+        
+        <!-- Modal script -->
+        <script>
+            // Open modal function
+            function openModal(modalId) {
+                document.getElementById(modalId).style.display = 'block';
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
+            }
+            
+            // Close modal function
+            function closeModal(modalId) {
+                document.getElementById(modalId).style.display = 'none';
+                document.body.style.overflow = 'auto'; // Enable scrolling
+            }
+            
+            // Close modal when clicking outside content
+            document.addEventListener('click', function(e) {
+                if (e.target.classList.contains('modal')) {
+                    e.target.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+            
+            // Close modals with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    document.getElementById('welcome-modal').style.display = 'none';
+                    document.getElementById('sales-modal').style.display = 'none';
+                    document.getElementById('reengage-modal').style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+            
+            // Form submission handler
+            function submitForm(event) {
+                event.preventDefault();
+                
+                const form = document.getElementById('contact-form');
+                const status = document.getElementById('form-status');
+                const submitBtn = document.getElementById('submit-btn');
+                
+                // Change button text and disable
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Sending...';
+                
+                // Get form data
+                const formData = new FormData(form);
+                const data = {};
+                formData.forEach((value, key) => data[key] = value);
+                
+                // Send form data
+                fetch('https://formsubmit.co/ajax/vasukapadiya22@gmail.com', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        // Show success message
+                        status.style.display = 'block';
+                        status.textContent = 'Message sent successfully!';
+                        status.style.color = '#28a745';
+                        form.reset();
+                        
+                        // Redirect to thank you page after delay
+                        setTimeout(() => {
+                            window.location.href = 'thankyou.html';
+                        }, 1000);
+                    } else {
+                        throw new Error('Form submission failed');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    status.style.display = 'block';
+                    status.textContent = 'Something went wrong. Please try again or contact directly via WhatsApp.';
+                    status.style.color = '#dc3545';
+                })
+                .finally(() => {
+                    // Reset button
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Send Message';
+                });
+            }
+        </script>
+    </body>
+</html>

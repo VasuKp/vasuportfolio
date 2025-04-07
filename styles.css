@@ -210,41 +210,27 @@ section {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background: #25d366;
-  color: white;
   width: 60px;
   height: 60px;
+  background-color: #25d366;
+  color: white;
   border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
   display: flex;
-  justify-content: center;
   align-items: center;
-  font-size: 28px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  z-index: 100;
-  transition: var(--transition);
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
-  }
-  70% {
-    transform: scale(1.05);
-    box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
-  }
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-  }
+  justify-content: center;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .whatsapp-float:hover {
-  color: white;
-  background: #128C7E;
-  transform: scale(1.1);
-  animation: none;
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-float i {
+  font-size: 32px;
 }
 
 /* ===== NAVBAR ===== */
@@ -1285,13 +1271,12 @@ footer .container {
   .whatsapp-float {
     width: 50px;
     height: 50px;
-    bottom: 20px;
+    bottom: 30px;
     right: 20px;
   }
   
   .whatsapp-float i {
-    font-size: 24px;
-    margin-top: 13px;
+    font-size: 28px;
   }
 }
 
@@ -1552,38 +1537,49 @@ textarea:focus:not(:focus-visible) {
 
 /* ===== SCROLL TO TOP BUTTON ===== */
 .scroll-top-btn {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 45px;
-  height: 45px;
-  background-color: var(--primary-color);
-  color: white;
-  border-radius: 50%;
-  border: none;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
-  z-index: 99;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.3s, transform 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.scroll-top-btn.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.scroll-top-btn:hover {
-  background-color: var(--hover-color);
-  transform: translateY(-3px);
+  position: fixed !important;
+  bottom: 100px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 50px !important;
+  height: 50px !important;
+  background-color: #3742fa !important;
+  color: white !important;
+  border: 3px solid white !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  z-index: 9999999 !important;
+  cursor: pointer !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6) !important;
+  transition: transform 0.3s ease !important;
+  animation: pulse-button 2s infinite !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
 }
 
 .scroll-top-btn i {
-  font-size: 18px;
+  font-size: 1.8rem !important;
+}
+
+@keyframes pulse-button {
+  0% {
+    box-shadow: 0 0 0 0 rgba(55, 66, 250, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(55, 66, 250, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(55, 66, 250, 0);
+  }
+}
+
+.scroll-top-btn:hover {
+  transform: translateX(-50%) translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  animation: none;
 }
 
 /* Mobile menu animation and positioning */
@@ -1611,13 +1607,24 @@ body.menu-open {
 /* Handle WhatsApp button position relative to scroll button on mobile */
 @media (max-width: 768px) {
   .scroll-top-btn {
-    bottom: 85px;
-    width: 40px;
-    height: 40px;
+    width: 50px !important;
+    height: 50px !important;
+    bottom: 100px !important;
   }
   
   .scroll-top-btn i {
-    font-size: 16px;
+    font-size: 1.5rem !important;
+  }
+  
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    bottom: 30px;
+    right: 20px;
+  }
+  
+  .whatsapp-float i {
+    font-size: 28px;
   }
 }
 

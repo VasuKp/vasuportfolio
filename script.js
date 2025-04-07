@@ -99,6 +99,44 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize active nav on page load
     setActiveNav();
 
+    // Get the scroll-to-top button from HTML
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    
+    // Show/hide scroll-to-top button based on scroll position
+    if (scrollTopBtn) {
+        // Initial state - check current scroll position
+        if (window.scrollY > 100) {
+            scrollTopBtn.style.opacity = '1';
+            scrollTopBtn.style.visibility = 'visible';
+            scrollTopBtn.style.pointerEvents = 'auto';
+        } else {
+            scrollTopBtn.style.opacity = '0';
+            scrollTopBtn.style.visibility = 'hidden';
+            scrollTopBtn.style.pointerEvents = 'none';
+        }
+        
+        // Add scroll event listener
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                scrollTopBtn.style.opacity = '1';
+                scrollTopBtn.style.visibility = 'visible';
+                scrollTopBtn.style.pointerEvents = 'auto';
+            } else {
+                scrollTopBtn.style.opacity = '0';
+                scrollTopBtn.style.visibility = 'hidden';
+                scrollTopBtn.style.pointerEvents = 'none';
+            }
+        });
+        
+        // Scroll to top when button is clicked
+        scrollTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+
     // Animate elements when they come into view
     function initSectionAnimation() {
         const animateElements = document.querySelectorAll('.services-list li, .portfolio-item, .testimonial-card, .contact-form');
@@ -125,27 +163,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Call the animation function
     initSectionAnimation();
-
-    // Add scroll-up button functionality
-    const scrollBtn = document.createElement('button');
-    scrollBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
-    scrollBtn.classList.add('scroll-top-btn');
-    document.body.appendChild(scrollBtn);
-
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 500) {
-            scrollBtn.classList.add('show');
-        } else {
-            scrollBtn.classList.remove('show');
-        }
-    });
-
-    scrollBtn.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
 
     // Fix for iOS touch events on mobile menu
     if ('ontouchstart' in window) {

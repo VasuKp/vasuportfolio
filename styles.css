@@ -1550,14 +1550,10 @@ textarea:focus:not(:focus-visible) {
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
-  z-index: 9999999 !important;
+  z-index: 99999999 !important;
   cursor: pointer !important;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6) !important;
-  transition: transform 0.3s ease !important;
-  animation: pulse-button 2s infinite !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-  pointer-events: auto !important;
+  transition: opacity 0.3s ease !important;
 }
 
 .scroll-top-btn i {

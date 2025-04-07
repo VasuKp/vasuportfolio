@@ -102,38 +102,23 @@ document.addEventListener('DOMContentLoaded', function() {
     // Get the scroll-to-top button from HTML
     const scrollTopBtn = document.getElementById('scrollTopBtn');
     
-    // Show/hide scroll-to-top button based on scroll position
+    // Always show the scroll-to-top button except at very top of page
     if (scrollTopBtn) {
-        // Initial state - check current scroll position
-        if (window.scrollY > 100) {
-            scrollTopBtn.style.opacity = '1';
-            scrollTopBtn.style.visibility = 'visible';
-            scrollTopBtn.style.pointerEvents = 'auto';
-        } else {
-            scrollTopBtn.style.opacity = '0';
-            scrollTopBtn.style.visibility = 'hidden';
-            scrollTopBtn.style.pointerEvents = 'none';
-        }
+        // Force visibility styles
+        scrollTopBtn.style.opacity = '1';
+        scrollTopBtn.style.visibility = 'visible';
+        scrollTopBtn.style.pointerEvents = 'auto';
         
-        // Add scroll event listener
+        // Add scroll event listener with simpler logic
         window.addEventListener('scroll', function() {
-            if (window.scrollY > 100) {
-                scrollTopBtn.style.opacity = '1';
-                scrollTopBtn.style.visibility = 'visible';
-                scrollTopBtn.style.pointerEvents = 'auto';
-            } else {
+            // Button is only hidden at the very top of the page
+            if (window.scrollY <= 10) {
                 scrollTopBtn.style.opacity = '0';
                 scrollTopBtn.style.visibility = 'hidden';
-                scrollTopBtn.style.pointerEvents = 'none';
+            } else {
+                scrollTopBtn.style.opacity = '1';
+                scrollTopBtn.style.visibility = 'visible';
             }
-        });
-        
-        // Scroll to top when button is clicked
-        scrollTopBtn.addEventListener('click', function() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
         });
     }
 
